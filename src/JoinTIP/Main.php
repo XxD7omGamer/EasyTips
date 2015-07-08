@@ -14,6 +14,7 @@ class Main extends PluginBase implements Listener{
 
   public function onEnable(){
     $this->saveDefaultConfig();
+    $config = $this->getConfig();
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
     $this->getLogger()->info(TextFormat::GOLD."Join" . TextFormat::BLUE . "TIP" . TextFormat::GREEN . " Has Been Enabled!");
     $this->getLogger()->info(TextFormat::BLUE."Created By" . TextFormat::BOLD . " " . TextFormat::LIGHT_PURPLE . "LegacyDEVS");
@@ -22,8 +23,8 @@ class Main extends PluginBase implements Listener{
     }
     
     public function onJoinEvent(PlayerJoinEvent $event){
-      $msg = $cfg->get("Message");
-      $cfg = $this->getConfig();
+      $config = $this->getConfig();
+      $msg = $config->get("Message");
       $p = $event->getPlayer();
       $player = $p->getName();
       $p->sendTip($msg);
