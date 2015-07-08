@@ -16,8 +16,8 @@ class Main extends PluginBase implements Listener{
     $this->saveDefaultConfig();
     $cfg = $this->getConfig();
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    $this->getLogger->info(TextFormat::GOLD."Join" . TextFormat::BLUE . "TIP" . TextFormat::GREEN . " Has Been Enabled!");
-    $this->getLogger->info(TextFormat::BLUE."Created By" . TextFormat::BOLD . " " . TextFormat::LIGHT_PURPLE . "LegacyDEVS");
+    $this->getLogger()->info(TextFormat::GOLD."Join" . TextFormat::BLUE . "TIP" . TextFormat::GREEN . " Has Been Enabled!");
+    $this->getLogger()->info(TextFormat::BLUE."Created By" . TextFormat::BOLD . " " . TextFormat::LIGHT_PURPLE . "LegacyDEVS");
     
 		
     }
