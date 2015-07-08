@@ -22,5 +22,5 @@
 #                                   |     §f    =   White         |
 #                                   +-----------------------------+
 
-Message: "§l§6Welcome §4 $player §6!"
+Message: "§l§6Welcome §4 {PLAYER} §6!"
 
