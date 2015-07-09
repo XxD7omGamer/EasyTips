@@ -32,8 +32,9 @@ class Main extends PluginBase implements Listener{
       $msg = $config->get("Message-Join");
       $msg = str_replace("{PLAYER}", $playerName, $msg);
       $p = $event->getPlayer();
-      $p->sendTip($msg);
       $players->sendTip($msg2);
+      $p->sendTip($msg);
+      $p->sendTip($msg);
       }
       }
       
