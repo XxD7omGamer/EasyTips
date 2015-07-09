@@ -1,5 +1,5 @@
-name: JoinTIP
-author: LegacyDEVS
-main: JoinTIP\Main
+name: EasyTips
+author: ItzBulkDev
+main: EasyTips\Main
 version: 1.0
 api: [1.12.1]
