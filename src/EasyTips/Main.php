@@ -1,6 +1,6 @@
 <?php
 
-namespace JoinTIP;
+namespace EasyTips;
 
 use pocketmine\Player;
 use pocketmine\Server;
