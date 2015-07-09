@@ -26,7 +26,6 @@ class Main extends PluginBase implements Listener{
       $playerName = $event->getPlayer()->getName();
       str_replace("{PLAYER}", $playerName, $msg);
       $config = $this->getConfig();
-      $msg = $config->get("Message");
       $p = $event->getPlayer();
       $p->sendTip($msg);
       
