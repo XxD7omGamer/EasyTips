@@ -27,7 +27,7 @@ class Main extends PluginBase implements Listener{
       $config = $this->getConfig();
       $players = $this->getServer()->getPlayers();
       $playerName = $event->getPlayer()->getName();
-      $msg2 = $config->get("Announce-Join")
+      $msg2 = $config->get("Announce-Join");
       $msg2 = str_replace("{PLAYER}", $playerName, $msg2);
       $msg = $config->get("Message-Join");
       $msg = str_replace("{PLAYER}", $playerName, $msg);
@@ -41,7 +41,7 @@ class Main extends PluginBase implements Listener{
       $config = $this->getConfig();
       $players = $this->getServer()->getPlayers();
       $playerName = $event->getPlayer()->getName();
-      $msg2 = $config->get("Announce-Quit")
+      $msg2 = $config->get("Announce-Quit");
       $msg2 = str_replace("{PLAYER}", $playerName, $msg2);
       $p = $event->getPlayer();
       $players->sendTip($msg2);
