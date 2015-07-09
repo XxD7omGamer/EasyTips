@@ -43,10 +43,7 @@ class Main extends PluginBase implements Listener{
       $playerName = $event->getPlayer()->getName();
       $msg2 = $config->get("Announce-Quit")
       $msg2 = str_replace("{PLAYER}", $playerName, $msg2);
-      $msg = $config->get("Message-Quit");
-      $msg = str_replace("{PLAYER}", $playerName, $msg);
       $p = $event->getPlayer();
-      $p->sendTip($msg);
       $players->sendTip($msg2);
       
       }
