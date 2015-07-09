@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener{
     
     public function onJoinEvent(PlayerJoinEvent $event){
       $config = $this->getConfig();
-      $players = $this->getServer()->getPlayers();
+      foreach($this->getServer()->getOnlinePlayers() as $players){
       $playerName = $event->getPlayer()->getName();
       $msg2 = $config->get("Announce-Join");
       $msg2 = str_replace("{PLAYER}", $playerName, $msg2);
@@ -34,18 +34,18 @@ class Main extends PluginBase implements Listener{
       $p = $event->getPlayer();
       $p->sendTip($msg);
       $players->sendTip($msg2);
-      
+      }
       }
       
       public function onQuitEvent(PlayerQuitEvent $event){
       $config = $this->getConfig();
-      $players = $this->getServer()->getPlayers();
+      foreach($this->getServer()->getOnlinePlayers() as $players){
       $playerName = $event->getPlayer()->getName();
       $msg2 = $config->get("Announce-Quit");
       $msg2 = str_replace("{PLAYER}", $playerName, $msg2);
       $p = $event->getPlayer();
       $players->sendTip($msg2);
-      
+      }
       }
       
     }
