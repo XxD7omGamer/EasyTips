@@ -7,6 +7,7 @@ use pocketmine\Server;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
 
@@ -24,11 +25,29 @@ class Main extends PluginBase implements Listener{
     
     public function onJoinEvent(PlayerJoinEvent $event){
       $config = $this->getConfig();
+      $players = $this->getServer()->getPlayers();
       $playerName = $event->getPlayer()->getName();
-      $msg = $config->get("Message");
+      $msg2 = $config->get("Announce-Join")
+      $msg2 = str_replace("{PLAYER}", $playerName, $msg2);
+      $msg = $config->get("Message-Join");
       $msg = str_replace("{PLAYER}", $playerName, $msg);
       $p = $event->getPlayer();
       $p->sendTip($msg);
+      $players->sendTip($msg2);
+      
+      }
+      
+      public function onQuitEvent(PlayerQuitEvent $event){
+      $config = $this->getConfig();
+      $players = $this->getServer()->getPlayers();
+      $playerName = $event->getPlayer()->getName();
+      $msg2 = $config->get("Announce-Quit")
+      $msg2 = str_replace("{PLAYER}", $playerName, $msg2);
+      $msg = $config->get("Message-Quit");
+      $msg = str_replace("{PLAYER}", $playerName, $msg);
+      $p = $event->getPlayer();
+      $p->sendTip($msg);
+      $players->sendTip($msg2);
       
       }
       
