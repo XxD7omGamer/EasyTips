@@ -25,8 +25,8 @@ class Main extends PluginBase implements Listener{
     public function onJoinEvent(PlayerJoinEvent $event){
       $config = $this->getConfig();
       $msg = $config->get("Message");
+      $msg = str_replace("{PLAYER}", $playerName, $msg);
       $playerName = $event->getPlayer()->getName();
-      str_replace("{PLAYER}", $playerName, $msg);
       $p = $event->getPlayer();
       $p->sendTip($msg);
       
