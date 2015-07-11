@@ -4,7 +4,7 @@ namespace EasyTips;
 
 use pocketmine\Player;
 use pocketmine\Server;
-use pocketmine\event\PlayerDeathEvent;
+use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
