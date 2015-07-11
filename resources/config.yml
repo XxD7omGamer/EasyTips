@@ -5,13 +5,13 @@
 # | Announce-Quit  =  Broadcast Quit  |   |     §o    =   Italic        |
 # | Announce-Join  =  Broadcast Join  |   |     §r    =   Reset         |
 # | {PLAYER}       =  Player's Name   |   |     §0    =   Black         |
-# +-----------------------------------+   |     §1    =   Dark Blue     |
-#                                         |     §2    =   Dark Green    |
-#                                         |     §3    =   Dark Aqua     |
-#                                         |     §4    =   Dark Red      |
-#                                         |     §5    =   Dark Purple   |
-#                                         |     §6    =   Gold          |
-#                                         |     §7    =   Gray          |
+# | {KILLER}       =  Killer's Name   |   |     §1    =   Dark Blue     |
+# | Announce-Death =  Broadcast Death |   |     §2    =   Dark Green    |
+# | Killed-Message =  Message Sent To |   |     §3    =   Dark Aqua     |
+# |                   -- Killed Player|   |     §4    =   Dark Red      |
+# | Killer-Message =  Message Sent To |   |     §5    =   Dark Purple   |
+# |                    -- Killer      |   |     §6    =   Gold          |
+# +-----------------------------------+   |     §7    =   Gray          |
 #                                         |     §8    =   Dark Gray     |
 #                                         |     §9    =   Blue          |
 #                                         |     §a    =   Green         |
@@ -25,5 +25,5 @@
 Message-Join: "§l§6Welcome §4{PLAYER}§6!"
 Announce-Join: "§l§4{PLAYER} §6Joined The Server!"
 Announce-Quit: "§l§4{PLAYER} Left The Server!"
-
+Announce-Death: "§l§6{PLAYER} §r§4was killed by §6§l{KILLER}"
 
