@@ -65,7 +65,7 @@ class Main extends PluginBase implements Listener{
 			$msga = str_replace("{PLAYER}", $player->getName(), $msgb);
 			foreach($this->getServer()->getOnlinePlayers() as $players);
 			$players->sendTip($msg);
-			$player->sendMessage($msga);
+			$player->sendTip($msga);
 			$killer->sendTip($msgb);
 		
 	}else{
