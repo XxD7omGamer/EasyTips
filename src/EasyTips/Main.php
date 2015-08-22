@@ -50,29 +50,5 @@ class Main extends PluginBase implements Listener{
       }
       }
       
-      	public function onDeath(PlayerDeathEvent $event){
-		$cause = $event->getEntity()->getLastDamageCause();
-		$killer = $event->getEntity()->getLastDamageCause()->getDamager();
-		$player = $event->getEntity();
-		if($cause instanceof EntityDamageByEntityEvent and $killer instanceof Player and $player instanceof Player) {
-			$config = $this->getConfig();
-			$msg = $config->get("Announce-Death");
-			$msg = str_replace("{PLAYER}", $player->getName(), $msg);
-			$msg = str_replace("{KILLER}", $killer->getName(), $msg);
-			$msga = $config->get("Killed-Message");
-			$msga = str_replace("{KILLER}", $killer->getName(), $msga);
-			$msgb = $config->get("Killer-Message");
-			$msga = str_replace("{PLAYER}", $player->getName(), $msgb);
-			foreach($this->getServer()->getOnlinePlayers() as $players);
-			$players->sendTip($msg);
-			$player->sendTip($msga);
-			$killer->sendTip($msgb);
-		
-	}else{
-		$event->setCancelled();
-	}
-
-}
-      
     }
 
